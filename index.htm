@@ -25,6 +25,9 @@
        font-weight: bolder;
      }
 
+     .definition-font {
+       letter-spacing: 0.05em;
+     }
      .bg {
        min-height: 100%;
      }
@@ -34,12 +37,30 @@
        left: 50%;
        transform: translate(-50%, -50%);
      }
+
      .big-font {
        font-size: 64px !important;
      }
-     .sitelink-position-bottomleft {
-       font-size: 20px !important;
 
+     @media screen and (min-width: 601px) {
+       .big-font {
+         font-size: 64px !important;
+       }
+       .small-font {
+         font-size: 20px !important;
+       }
+     }
+
+     @media screen and (max-width: 600px) {
+       .big-font {
+         font-size: 32px !important;
+       }
+       .small-font {
+         font-size: 16px !important;
+       }
+     }
+
+     .sitelink-position-bottomleft {
        position: absolute;
        left: 0;
        bottom: 0;
@@ -51,11 +72,11 @@
 <body>
   <div class="bg">
     <div class="display-middle">
-      <span class="big-font"><a href="https://poczwardowski.substack.com" target="_blank"><b>perspectiveship</b></a> - </span>
+      <span class="big-font definition-font"><a href="https://poczwardowski.substack.com" target="_blank"><b>perspectiveship</b></a> - </span>
       <span class="big-font">state or ability to take a look at the world using different perspectives.</span>
     </div>
 
-    <div class="sitelink-position-bottomleft">
+    <div class="sitelink-position-bottomleft small-font">
       <a href="https://poczwardowski.substack.com" target="_blank">read.perspectiveship.com</a>
     </div>
   </div>
